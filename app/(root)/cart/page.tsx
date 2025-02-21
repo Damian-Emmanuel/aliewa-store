@@ -164,15 +164,13 @@ export default function CartPage() {
                           plain
                         />
                       </span>{' '}
-                      
                         of eligible items to your order to qualify for FREE Shipping
-                      
                     </div>
                   ) : (
                     <div className='flex-1'>
                       <span className='text-green-700'>
                          Your order qualifies for FREE Shipping
-                      </span>{' '}
+                      </span>{''}
                          Choose this option at checkout
                     </div>
                   )}
