@@ -1,3 +1,4 @@
+'use server'
 import { signIn, signOut } from '@/auth'
 import { IUserSignIn, IUserSignUp } from '@/types'
 import { redirect } from 'next/navigation'
@@ -16,6 +17,9 @@ export async function signInWithCredentials(user: IUserSignIn) {
     redirect(redirectTo.redirect)
   }
 
+  export const SignInWithGoogle = async () => {
+    await signIn('google')
+  }
   
 // CREATE
 export async function registerUser(userSignUp: IUserSignUp) {
